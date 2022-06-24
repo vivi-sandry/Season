@@ -1,3 +1,2 @@
 # Season
-Aplicação para uma escola <br>
-test
+Aplicação para uma escola
