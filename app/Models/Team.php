@@ -21,13 +21,13 @@ class Team extends Model
         return $this->belongsToMany(Student::class);
     }
 
-    public function classrooms()
+    public function classroom()
     {
-        return $this->hasMany(Classroom::class);
+        return $this->belongsTo(Classroom::class);
     }
 
-    public function teachers()
+    public function teacher()
     {
-        return $this->hasMany(Teacher::class);
+        return $this->belongsTo(Teacher::class);
     }
 }

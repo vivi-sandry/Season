@@ -14,9 +14,9 @@ class Teacher extends Model
        'email',
     ];
 
-    public function team()
+    public function teams()
     {
-        return $this->belongsTo(Team::class);
+        return $this->hasMany(Team::class);
     }
 
     public function disciplines()

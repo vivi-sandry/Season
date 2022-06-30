@@ -13,8 +13,8 @@ class Category extends Model
        'name',
     ];
 
-    public function discipline()
+    public function disciplines()
     {
-        return $this->belongsTo(Discipline::class);
+        return $this->hasMany(Discipline::class);
     }
 }

@@ -14,8 +14,8 @@ class Classroom extends Model
         'max_students',
     ];
 
-    public function team()
+    public function teams()
     {
-        return $this->belongsTo(Team::class);
+        return $this->hasMany(Team::class);
     }
 }

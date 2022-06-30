@@ -20,6 +20,6 @@ class Discipline extends Model
 
     public function cartegory()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
 }
