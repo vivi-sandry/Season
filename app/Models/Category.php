@@ -15,6 +15,7 @@ class Category extends Model
 
     public function disciplines()
     {
+        //retorno relacionamento um para muitos category e dicipline
         return $this->hasMany(Discipline::class);
     }
 }

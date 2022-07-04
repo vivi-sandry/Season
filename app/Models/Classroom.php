@@ -16,6 +16,7 @@ class Classroom extends Model
 
     public function teams()
     {
+        //retorno de relacionamento um para muitos classroom e team
         return $this->hasMany(Team::class);
     }
 }

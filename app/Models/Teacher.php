@@ -16,11 +16,13 @@ class Teacher extends Model
 
     public function teams()
     {
+        //retorno de relacionamento um para muitos team e teacher
         return $this->hasMany(Team::class);
     }
 
     public function disciplines()
     {
+        //relacionamento
         return $this->belongsToMany(Discipline::class);
     }
 }

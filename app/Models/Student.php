@@ -17,6 +17,7 @@ class Student extends Model
 
     public function teams()
     {
+        //relacionamento muitos para muitos student e team
         return $this->belongsToMany(Team::class);
     }
 }

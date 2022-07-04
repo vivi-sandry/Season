@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            //nullable permite o campo ficar sem o dado, default expecifica o dado que vai entrar no campo
+            //nullable permite o campo ficar sem o dado, default expecifica que o dado é null.
             $table->string('email')->nullable()->default(null);
             $table->string('interest')->nullable()->default(null);
             $table->timestamps();

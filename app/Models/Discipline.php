@@ -20,6 +20,7 @@ class Discipline extends Model
 
     public function cartegory()
     {
+        //relacionamento muitos para um dicipline e category
         return $this->belongsTo(Category::class);
     }
 }
