@@ -53,3 +53,22 @@ Route::group(['prefix' => 'team', 'as' => 'team.'], function () {
     Route::delete('{team}', [\App\Http\Controllers\TeamController::class, 'destroy'])->name('destroy');
 
 });
+
+
+Route::group(['prefix' => 'classroom', 'as' => 'classroom.'], function () {
+    //index é todos os dados iniciais. get exibe
+    Route::get('', [\App\Http\Controllers\ClassroomController::class, 'index'])->name('index');
+    //rota intermediaria entre index e store
+    Route::get('create', [\App\Http\Controllers\ClassroomController::class, 'create'])->name('create');
+    //rota store. post para cadastro de dado. post armazena
+    Route::post('', [\App\Http\Controllers\ClassroomController::class, 'store'])->name('store');
+    //rota show exibir dados de um unico registro
+    Route::get('{classroom}', [\App\Http\Controllers\ClassroomController::class, 'show'])->name('show');
+    //rota edit. exibir formulario para editar registro
+    Route::get('{classroom}/edit', [\App\Http\Controllers\ClassroomController::class, 'edit'])->name('edit');
+    //rota update. put efetua a edição
+    Route::put('{classroom}', [\App\Http\Controllers\ClassroomController::class, 'update'])->name('update');
+    //rota delete.
+    Route::delete('{classroom}', [\App\Http\Controllers\ClassroomController::class, 'destroy'])->name('destroy');
+
+});

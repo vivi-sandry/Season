@@ -11,7 +11,7 @@ class Classroom extends Model
 
     protected $fillable = [
         'name',
-        'max_students',
+        'max_student',
     ];
 
     public function teams()
