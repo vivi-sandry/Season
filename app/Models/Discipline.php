@@ -11,6 +11,7 @@ class Discipline extends Model
 
     protected $fillable = [
         'name',
+        'category_id',
     ];
 
     public function teachers()
@@ -18,7 +19,7 @@ class Discipline extends Model
         return $this->belongsToMany(Teacher::class);
     }
 
-    public function cartegory()
+    public function category()
     {
         //relacionamento muitos para um dicipline e category
         return $this->belongsTo(Category::class);
