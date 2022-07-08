@@ -110,3 +110,22 @@ Route::group(['prefix' => 'discipline', 'as' => 'discipline.'], function () {
     Route::delete('{discipline}', [\App\Http\Controllers\DisciplineController::class, 'destroy'])->name('destroy');
 
 });
+
+
+Route::group(['prefix' => 'teacher', 'as' => 'teacher.'], function () {
+    //index é todos os dados iniciais. get exibe
+    Route::get('', [\App\Http\Controllers\TeacherController::class, 'index'])->name('index');
+    //rota intermediaria entre index e store
+    Route::get('create', [\App\Http\Controllers\TeacherController::class, 'create'])->name('create');
+    //rota store. post para cadastro de dado. post armazena
+    Route::post('', [\App\Http\Controllers\TeacherController::class, 'store'])->name('store');
+    //rota show exibir dados de um unico registro
+    Route::get('{teacher}', [\App\Http\Controllers\TeacherController::class, 'show'])->name('show');
+    //rota edit. exibir formulario para editar registro
+    Route::get('{teacher}/edit', [\App\Http\Controllers\TeacherController::class, 'edit'])->name('edit');
+    //rota update. put efetua a edição
+    Route::put('{teacher}', [\App\Http\Controllers\TeacherController::class, 'update'])->name('update');
+    //rota delete.
+    Route::delete('{teacher}', [\App\Http\Controllers\TeacherController::class, 'destroy'])->name('destroy');
+
+});
