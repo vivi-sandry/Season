@@ -14,6 +14,8 @@ class Team extends Model
         'ended_at',
         'scheduled_at',
         'duration',
+        'classroom_id',
+        'teacher_id',
     ];
 
     public function students()

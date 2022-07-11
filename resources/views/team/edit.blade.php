@@ -5,33 +5,34 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header text-primary">Cadastrar Turma</div>
+                    <div class="card-header text-primary">Editar Turma</div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('team.store') }}">
+                        <form method="POST" action="{{ route('team.update', $team->id) }}">
                             {{ csrf_field() }}
+                            {{ method_field('PUT') }}
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="mb-3 bmd-form-group">
-                                        <label for="started_at" class="bmd-label-floating">Data de Inicio</label>
-                                        <input id="started_at" type="date" class="form-control" name="started_at">
+                                        <label for="started_at" class="bmd-label-floating">Data de inicio</label>
+                                        <input id="started_at" type="date" class="form-control" name="started_at" value="{{ $team->started_at }}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="mb-3 bmd-form-group">
-                                        <label for="ended_at" class="bmd-label-floating">Data de Fim</label>
-                                        <input id="ended_at" type="date" class="form-control" name="ended_at">
+                                        <label for="ended_at" class="bmd-label-floating">Data de fim</label>
+                                        <input id="ended_at" type="date" class="form-control" name="ended_at" value="{{ $team->ended_at }}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="mb-3 bmd-form-group">
-                                        <label for="scheduled_at" class="bmd-label-floating">Horario da Aula</label>
-                                        <input id="scheduled_at" type="time" class="form-control" name="scheduled_at">
+                                        <label for="scheduled_at" class="bmd-label-floating">Horário</label>
+                                        <input id="scheduled_at" type="time" class="form-control" name="scheduled_at" value="{{ $team->scheduled_at }}">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="mb-3 bmd-form-group">
-                                        <label for="duration" class="bmd-label-floating">Duração da Aula</label>
-                                        <input id="duration" type="number" class="form-control" name="duration">
+                                        <label for="duration" class="bmd-label-floating">Horário</label>
+                                        <input id="duration" type="number" class="form-control" name="duration" value="{{ $team->duration }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -56,8 +57,8 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Editar</button>
                                 </div>
                             </div>
                         </form>
@@ -67,4 +68,3 @@
         </div>
     </div>
 @endsection
-

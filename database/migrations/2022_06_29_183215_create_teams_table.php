@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('started_at');
-            $table->timestamp('ended_at');
+            $table->date('started_at');
+            $table->date('ended_at');
             $table->time('scheduled_at')->nullable()->default(null);
             $table->integer('duration')->nullable()->default(null);
             $table->foreignId('classroom_id')->constrained();
