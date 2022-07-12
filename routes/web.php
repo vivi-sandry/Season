@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/season', function () {
     return view('welcome');
 });
 //grupo de rotas referentes as telas de Alunos

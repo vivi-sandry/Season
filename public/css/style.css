@@ -1,0 +1,15 @@
+.imagem-logo {
+    background-image: url("../img/header_home.jpg");
+    background-size: cover;
+    /**background-attachment: fixed;/**/
+    background-position: center;
+}
+
+.text-ver {
+    color: #f2184f;
+}
+
+.card-img-top {
+    width: 100px;
+    align-self: center;
+}
